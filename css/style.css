@@ -236,64 +236,6 @@ code {
   padding: 3px 10px;
 }
 
-/* ---------- 02. 핵심 기술 ---------- */
-.tech {
-  display: grid;
-  gap: 1px;
-  background: var(--line);
-  border: 1px solid var(--line);
-  border-top: 3px solid var(--navy);
-}
-.tech li {
-  background: var(--paper);
-  padding: 26px 26px 26px 24px;
-  display: grid;
-  grid-template-columns: 132px minmax(0, 1fr);
-  gap: 22px;
-  align-items: start;
-  transition: background .2s;
-}
-.tech li:hover { background: #fafbfd; }
-
-.tech__cat {
-  display: inline-block;
-  margin-top: 4px;
-  font-size: 11.5px;
-  font-weight: 800;
-  letter-spacing: .12em;
-  text-transform: uppercase;
-  color: var(--navy);
-  background: var(--navy-soft);
-  border: 1px solid #dde5f2;
-  padding: 4px 10px;
-  white-space: nowrap;
-}
-
-.tech h3 {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0 10px;
-  font-size: 21px;
-  font-weight: 800;
-  letter-spacing: -.035em;
-  line-height: 1.45;
-  color: var(--ink);
-}
-.tech h3 i {
-  width: 5px; height: 5px;
-  background: var(--navy);
-  opacity: .45;
-  flex: none;
-}
-.tech p {
-  margin-top: 9px;
-  font-size: 14.8px;
-  color: var(--ink-sub);
-  padding-left: 13px;
-  border-left: 2px solid var(--line);
-}
-
 /* ---------- 03. Overview — 서비스 링크 ---------- */
 .service {
   display: flex;
@@ -883,9 +825,6 @@ html.anim .sheet.is-in [data-step] { opacity: 1; transform: none; }
   .claim { padding: 20px 18px; }
   .claim__head { font-size: 18px; }
   .shift__quote { font-size: 16.5px; padding: 18px; }
-  .tech li { grid-template-columns: 1fr; gap: 12px; padding: 22px 18px; }
-  .tech__cat { margin-top: 0; justify-self: start; }
-  .tech h3 { font-size: 18px; }
   .intent { font-size: 19px; }
   .stats { grid-template-columns: 1fr; }
   .keys { grid-template-columns: 1fr; }
@@ -912,6 +851,6 @@ html.anim .sheet.is-in [data-step] { opacity: 1; transform: none; }
   .doc { max-width: none; padding: 0; border: 0; min-height: 0; }
   .sheet { padding: 0 0 18pt; border-top: 0; break-inside: avoid; }
   .sheet + .sheet { break-before: page; padding-top: 0; }
-  .tsc, .tech li, .retro li, .key, .stat, .evi__item, .reasons li, .claim, .shift, .infra, .shot { break-inside: avoid; }
+  .tsc, .retro li, .key, .stat, .evi__item, .reasons li, .claim, .shift, .infra, .shot { break-inside: avoid; }
   a { color: inherit; }
 }

@@ -17,7 +17,7 @@
     '.cover__top', '.cover__lead', '.cover__meta',
     '.lead', '.body', '.intent', '.reasons li', '.intent__end',
     '.service', '.facts > div',
-    '.tech li', '.todo', '.sub', '.slot', '.shot',
+    '.todo', '.sub', '.slot', '.shot',
     '.evi__item', '.stat', '.keys__lead', '.key',
     '.claim', '.shift', '.shift__quote', '.infra li',
     '.ts-list .tsc', '.retro li', '.links'
