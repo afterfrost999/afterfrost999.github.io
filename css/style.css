@@ -500,6 +500,14 @@ code {
 }
 .evi__col { display: grid; gap: 20px; }
 
+/* 같은 크기로 나란히 놓는 차트 쌍 */
+.evi--even { grid-template-columns: repeat(2, 1fr); }
+.evi--even .figbox img {
+  aspect-ratio: 7 / 6;
+  object-fit: contain;
+  height: auto;
+}
+
 .figbox {
   display: block;
   border: 1px solid var(--line);
