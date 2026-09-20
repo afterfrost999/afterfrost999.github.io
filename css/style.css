@@ -791,6 +791,79 @@ code {
   font-family: var(--mono);
 }
 
+/* ---------- 이미지 확대 (라이트박스) ---------- */
+body.is-locked { overflow: hidden; }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: grid;
+  place-items: center;
+  padding: clamp(16px, 4vw, 48px);
+  padding-top: calc(clamp(16px, 4vw, 48px) + env(safe-area-inset-top, 0px));
+  padding-bottom: calc(clamp(16px, 4vw, 48px) + env(safe-area-inset-bottom, 0px));
+  background: rgba(14, 16, 20, .88);
+  cursor: zoom-out;
+  opacity: 0;
+  transition: opacity .22s ease;
+}
+.lightbox.is-open { opacity: 1; }
+.lightbox[hidden] { display: none; }
+
+.lightbox__inner {
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  transform: scale(.97);
+  transition: transform .22s cubic-bezier(.22, .61, .36, 1);
+}
+.lightbox.is-open .lightbox__inner { transform: none; }
+
+.lightbox__inner img {
+  max-width: 100%;
+  max-height: calc(100vh - 150px);
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  background: #fff;
+  border-radius: 2px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, .45);
+}
+.lightbox__inner figcaption {
+  font-size: 13.5px;
+  color: rgba(255, 255, 255, .78);
+  text-align: center;
+  max-width: 60ch;
+}
+
+.lightbox__close {
+  position: absolute;
+  top: calc(16px + env(safe-area-inset-top, 0px));
+  right: 16px;
+  width: 42px; height: 42px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  color: #fff;
+  background: rgba(255, 255, 255, .12);
+  cursor: pointer;
+  transition: background .2s;
+}
+.lightbox__close:hover { background: rgba(255, 255, 255, .24); }
+.lightbox__close svg {
+  width: 19px; height: 19px;
+  fill: none; stroke: currentColor;
+  stroke-width: 2; stroke-linecap: round;
+}
+
+/* 확대 가능한 이미지에 돋보기 커서 */
+.figbox, .shot__frame { cursor: zoom-in; }
+
 /* ---------- 섹션 전환 효과 ---------- */
 /* .anim 클래스는 JS가 부여 — JS가 없거나 모션을 줄이면 전부 그대로 보입니다 */
 html.anim .sheet {
@@ -877,7 +950,7 @@ html.anim .sheet.is-in [data-step] { opacity: 1; transform: none; }
 
 @media print {
   body { background: #fff; font-size: 10.5pt; line-height: 1.65; }
-  .index { display: none !important; }
+  .index, .lightbox { display: none !important; }
   html.anim .sheet,
   html.anim .sheet [data-step] { opacity: 1 !important; transform: none !important; }
   html.anim .sheet .sheet__head { border-bottom-color: var(--ink); }

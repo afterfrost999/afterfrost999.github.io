@@ -48,7 +48,69 @@
     requestAnimationFrame(() => sheets[0] && sheets[0].classList.add('is-in'));
   }
 
-  /* ---------- 2. 좌측 색인 하이라이트 ---------- */
+  /* ---------- 2. 이미지 확대 (같은 페이지 안에서) ---------- */
+  const zoomables = Array.from(document.querySelectorAll('.figbox, .shot__frame'));
+
+  if (zoomables.length) {
+    const box = document.createElement('div');
+    box.className = 'lightbox';
+    box.setAttribute('role', 'dialog');
+    box.setAttribute('aria-modal', 'true');
+    box.hidden = true;
+    box.innerHTML =
+      '<button class="lightbox__close" type="button" aria-label="닫기">' +
+      '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></button>' +
+      '<figure class="lightbox__inner"><img alt="" /><figcaption></figcaption></figure>';
+    document.body.appendChild(box);
+
+    const bigImg = box.querySelector('img');
+    const bigCap = box.querySelector('figcaption');
+    let opener = null;
+
+    function open(link) {
+      const src = link.getAttribute('href');
+      const source = link.querySelector('img');
+      const cap = link.closest('figure') && link.closest('figure').querySelector('figcaption');
+
+      bigImg.src = src;
+      bigImg.alt = source ? source.alt : '';
+      bigCap.textContent = cap ? cap.textContent.replace('(클릭하면 확대)', '').trim() : '';
+      bigCap.hidden = !bigCap.textContent;
+
+      opener = link;
+      box.hidden = false;
+      document.body.classList.add('is-locked');
+      requestAnimationFrame(() => box.classList.add('is-open'));
+      box.querySelector('.lightbox__close').focus();
+    }
+
+    function close() {
+      box.classList.remove('is-open');
+      document.body.classList.remove('is-locked');
+      window.setTimeout(() => {
+        box.hidden = true;
+        bigImg.removeAttribute('src');
+      }, 220);
+      if (opener) { opener.focus(); opener = null; }
+    }
+
+    zoomables.forEach((link) => {
+      link.addEventListener('click', (e) => {
+        // 새 탭으로 열려는 조작(⌘/Ctrl/가운데 버튼)은 그대로 둔다
+        if (e.metaKey || e.ctrlKey || e.shiftKey || e.button !== 0) return;
+        e.preventDefault();
+        open(link);
+      });
+    });
+
+    // 어디를 누르든 닫힘 — 이미지 자체도 포함
+    box.addEventListener('click', close);
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !box.hidden) close();
+    });
+  }
+
+  /* ---------- 3. 좌측 색인 하이라이트 ---------- */
   const links = Array.from(document.querySelectorAll('.index a'));
   if (!links.length || !canWatch) return;
 
