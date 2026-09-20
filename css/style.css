@@ -388,6 +388,40 @@ code {
   line-height: 1.65;
 }
 
+/* ---------- 02. 주요 기능 ---------- */
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+  counter-reset: feat;
+}
+.features li {
+  background: var(--paper);
+  padding: 20px 22px;
+  counter-increment: feat;
+}
+.features b {
+  display: flex;
+  align-items: baseline;
+  gap: 9px;
+  font-size: 16.5px;
+  font-weight: 800;
+  letter-spacing: -.03em;
+  color: var(--navy);
+  margin-bottom: 5px;
+}
+.features b::before {
+  content: "0" counter(feat);
+  font-family: var(--mono);
+  font-size: 11.5px;
+  font-weight: 600;
+  letter-spacing: .04em;
+  color: var(--ink-mute);
+}
+.features p { font-size: 14.5px; color: var(--ink-sub); line-height: 1.7; }
+
 /* ---------- 04. 기획 의도 ---------- */
 .intent {
   font-size: 22px;
@@ -817,6 +851,7 @@ html.anim .sheet.is-in [data-step] { opacity: 1; transform: none; }
   .shots { grid-template-columns: 1fr; }
   .evi { grid-template-columns: 1fr; }
   .reasons { grid-template-columns: 1fr; }
+  .features { grid-template-columns: 1fr; }
   .shift { grid-template-columns: 1fr; }
   .infra { grid-template-columns: 1fr; }
   .shift__arrow { height: 26px; }
@@ -851,6 +886,6 @@ html.anim .sheet.is-in [data-step] { opacity: 1; transform: none; }
   .doc { max-width: none; padding: 0; border: 0; min-height: 0; }
   .sheet { padding: 0 0 18pt; border-top: 0; break-inside: avoid; }
   .sheet + .sheet { break-before: page; padding-top: 0; }
-  .tsc, .retro li, .key, .stat, .evi__item, .reasons li, .claim, .shift, .infra, .shot { break-inside: avoid; }
+  .tsc, .retro li, .key, .stat, .evi__item, .reasons li, .claim, .shift, .infra, .shot, .features li { break-inside: avoid; }
   a { color: inherit; }
 }
