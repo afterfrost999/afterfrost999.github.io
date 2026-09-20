@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<title>김승조 | Portfolio</title>
+<meta name="description" content="백엔드 개발부터 배포·운영까지 경험하며 문제의 현상보다 원인을 추적하고 해결하는 개발자, 김승조 포트폴리오." />
+<link rel="preconnect" href="https://cdn.jsdelivr.net" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- 좌측 색인 (넓은 화면에서만 노출) -->
+<nav class="index" aria-label="목차">
+  <ol>
+    <li><a href="#s01"><b>01</b><span>소개</span></a></li>
+    <li><a href="#s02"><b>02</b><span>핵심 기술</span></a></li>
+    <li><a href="#s03"><b>03</b><span>Voin Overview</span></a></li>
+    <li><a href="#s04"><b>04</b><span>기획</span></a></li>
+    <li><a href="#s05"><b>05</b><span>설문 · 인터뷰</span></a></li>
+    <li><a href="#s06"><b>06</b><span>서비스 화면</span></a></li>
+    <li><a href="#s07"><b>07</b><span>ERD · 구조도</span></a></li>
+    <li><a href="#s08"><b>08</b><span>Troubleshooting</span></a></li>
+    <li><a href="#s09"><b>09</b><span>회고</span></a></li>
+  </ol>
+</nav>
+
+<div class="doc">
+
+  <!-- ============ 01. 표지 / 소개 ============ -->
+  <header class="sheet cover" id="s01">
+    <div class="cover__top">
+      <figure class="photo">
+        <img src="assets/images/profile.jpg" alt="김승조 프로필 사진"
+             onerror="this.closest('.photo').classList.add('is-empty'); this.remove();" />
+        <figcaption class="ph">PHOTO</figcaption>
+      </figure>
+
+      <div class="cover__id">
+        <h1>김승조</h1>
+        <p class="cover__school">연세대학교 미래캠퍼스</p>
+        <p class="cover__dept">컴퓨터정보통신공학부<br />컴퓨터공학 전공</p>
+        <p class="cover__date">2026.08 수료</p>
+      </div>
+    </div>
+
+    <p class="cover__lead">
+      백엔드 개발부터 배포·운영까지 경험하며 문제의 현상보다 원인을 추적하고 해결하는 개발자입니다.
+    </p>
+
+    <div class="cover__meta">
+      <section class="meta">
+        <h2>기술 스택</h2>
+        <ul class="stack">
+          <li>Spring Boot</li><li>Spring Security</li><li>JWT / OAuth 2.0</li>
+          <li>PostgreSQL</li><li>JPA</li><li>Flyway</li>
+          <li>AWS EC2</li><li>Nginx</li><li>GitHub Actions</li>
+        </ul>
+      </section>
+
+      <div class="meta-row">
+        <section class="meta">
+          <h2>Certification</h2>
+          <p class="meta__item"><b>SQLD</b><span>2026.09</span></p>
+        </section>
+        <section class="meta">
+          <h2>Language</h2>
+          <p class="meta__item"><b>TOEIC 890</b><span>2025.05</span></p>
+        </section>
+        <section class="meta">
+          <h2>GitHub</h2>
+          <p class="meta__item"><a href="https://github.com/afterfrost999" target="_blank" rel="noopener">github.com/afterfrost999</a></p>
+        </section>
+        <section class="meta">
+          <h2>Email</h2>
+          <p class="meta__item"><a href="mailto:afterfrost999@gmail.com">afterfrost999@gmail.com</a></p>
+        </section>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============ 02. 핵심 기술 ============ -->
+  <section class="sheet" id="s02">
+    <div class="sheet__head">
+      <span class="num">02</span>
+      <h2 class="title">핵심 기술</h2>
+    </div>
+
+    <ol class="tech">
+      <li>
+        <span class="tech__cat">Backend</span>
+        <div class="tech__main">
+          <h3><b>Spring Boot</b><i></i><b>Spring Security</b><i></i><b>JWT / OAuth 2.0</b></h3>
+          <p>카카오 OAuth 로그인, JWT 인증, 핵심 도메인 로직과 트랜잭션 처리를 구현한 백엔드 핵심 기술</p>
+        </div>
+      </li>
+      <li>
+        <span class="tech__cat">Database</span>
+        <div class="tech__main">
+          <h3><b>PostgreSQL</b><i></i><b>JPA</b><i></i><b>Flyway</b></h3>
+          <p>데이터 영속화와 ERD 기반 도메인 설계, Flyway를 통한 운영 DB 스키마 버전 관리</p>
+        </div>
+      </li>
+      <li>
+        <span class="tech__cat">Infra · DevOps</span>
+        <div class="tech__main">
+          <h3><b>AWS EC2</b><i></i><b>Nginx</b><i></i><b>GitHub Actions</b></h3>
+          <p>실제 서비스 배포, 리버스 프록시 및 HTTPS 환경 구성, CI/CD와 배포 자동화</p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- ============ 03. Voin Overview ============ -->
+  <section class="sheet" id="s03">
+    <div class="sheet__head">
+      <span class="num">03</span>
+      <h2 class="title">Voin — Overview</h2>
+    </div>
+
+    <p class="lead">생성형 AI 기반 장점 발견 서비스</p>
+    <p class="body">
+      본인의 장점은 본인이 찾기 어렵다는 점을 알게 되었고, 그 과정을 AI한테 맡겨
+      쉽게 본인 / 타인의 장점을 도출하는 서비스를 만들게 되었습니다.
+    </p>
+
+    <a class="service" href="https://voin-app.duckdns.org" target="_blank" rel="noopener">
+      <span class="service__label">배포된 서비스</span>
+      <span class="service__url">voin-app.duckdns.org</span>
+      <span class="service__go">바로가기<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg></span>
+    </a>
+
+    <dl class="facts">
+      <div>
+        <dt>구분</dt>
+        <dd>팀 프로젝트<br /><span>연세대학교 미래캠퍼스 창업동아리 Do-it</span></dd>
+      </div>
+      <div>
+        <dt>규모 · 기간</dt>
+        <dd>5인 팀<br /><span>2025.03 ~ 2025.08</span></dd>
+      </div>
+      <div>
+        <dt>담당</dt>
+        <dd>Backend · Infra</dd>
+      </div>
+      <div>
+        <dt>개인 리팩토링</dt>
+        <dd>2026.09 ~</dd>
+      </div>
+    </dl>
+  </section>
+
+  <!-- ============ 04. 기획 ============ -->
+  <section class="sheet" id="s04">
+    <div class="sheet__head">
+      <span class="num">04</span>
+      <h2 class="title">기획 의도</h2>
+    </div>
+
+    <p class="intent">
+      <em>자기 인식</em>에 관심이 높은 <em>20 · 30대</em>는
+      정작 <em>본인의 장점을 객관적으로 파악하는 일</em>을 어려워합니다.
+    </p>
+
+    <ol class="reasons">
+      <li>
+        <b>부정적 편향</b>
+        <p>장점보다 단점이 먼저 떠오름</p>
+      </li>
+      <li>
+        <b>과소평가</b>
+        <p>자연스럽게 잘하는 것은 장점으로 세지 않음</p>
+      </li>
+      <li>
+        <b>좁은 정의</b>
+        <p>강점을 특정 영역으로만 한정해서 생각</p>
+      </li>
+    </ol>
+
+    <p class="intent__end">
+      그래서 <em>장점을 찾는 과정 자체를 도와주는 서비스</em>가 필요하다고 판단해 이 프로젝트를 기획했습니다.
+    </p>
+  </section>
+
+  <!-- ============ 05. 설문조사 / 인터뷰 ============ -->
+  <section class="sheet" id="s05">
+    <div class="sheet__head">
+      <span class="num">05</span>
+      <h2 class="title">설문조사 / 인터뷰</h2>
+    </div>
+
+    <div class="evi">
+      <figure class="evi__item">
+        <a class="figbox" href="assets/images/survey-q6.png" target="_blank" rel="noopener">
+          <img src="assets/images/survey-q6.png" alt="설문 Q6 — 경험이나 사례를 기반으로 스스로의 장점을 도출할 때 어려움을 느낀 적이 있는지에 대한 응답 분포" loading="lazy" />
+        </a>
+        <figcaption>설문조사 — 사례 기반 장점 도출의 어려움 <span>(클릭하면 원본 크기)</span></figcaption>
+      </figure>
+
+      <figure class="evi__item">
+        <a class="figbox" href="assets/images/interview-01.png" target="_blank" rel="noopener">
+          <img src="assets/images/interview-01.png" alt="심층 인터뷰 — 장점과 단점 중 어떤 것을 적는 과정이 더 쉬웠는지 (단점 9명, 장점 1명)" loading="lazy" />
+        </a>
+        <figcaption>심층 인터뷰 — 장점과 단점, 적기 쉬운 쪽 <span>(클릭하면 원본 크기)</span></figcaption>
+      </figure>
+    </div>
+
+    <h3 class="sub">조사 결과</h3>
+
+    <div class="stats">
+      <div class="stat">
+        <b class="stat__num">48<i>%</i></b>
+        <p class="stat__txt">사례를 기반으로 스스로의 장점을 도출하는 것이 <b>쉽지 않다</b>고 응답</p>
+      </div>
+      <div class="stat">
+        <b class="stat__num">9<i>/10</i></b>
+        <p class="stat__txt">인터뷰 참여자 10명 중 9명이 장점보다 <b>단점을 적는 과정이 더 쉬웠다</b>고 응답</p>
+      </div>
+    </div>
+
+    <p class="keys__lead">인터뷰를 통해 알게 된, 장점을 적기 어려운 이유는 세 가지로 좁혀졌습니다.</p>
+
+    <div class="keys">
+      <article class="key">
+        <h4>장점에 대한<br />기준이 애매함</h4>
+        <blockquote>“장점으로서 자신있는 걸 얘기했는데, 내세울 수 있는 기준이 맞을까 라는 생각이 많이 들어서 힘들었던 것 같다.”</blockquote>
+      </article>
+      <article class="key">
+        <h4>자기표현의<br />부끄러움</h4>
+        <blockquote>“스스로 미담을 생각하는 거 같아서 부끄러운 점이 있었다.”</blockquote>
+        <blockquote>“내가 나에 대한 좋은 것을 쓰기 부끄럽고 뭘 잘하는지 잘 모르겠다.”</blockquote>
+      </article>
+      <article class="key">
+        <h4>장점 인식<br />기회 자체가 적음</h4>
+        <blockquote>“장점은 평소에 생각하고 있지 않아서 어려웠다.”</blockquote>
+        <blockquote>“장점은 크게 일상에서 생각해 본 적이 없었다.”</blockquote>
+      </article>
+    </div>
+  </section>
+
+  <!-- ============ 06. 서비스 화면 ============ -->
+  <section class="sheet" id="s06">
+    <div class="sheet__head">
+      <span class="num">06</span>
+      <h2 class="title">서비스 화면</h2>
+    </div>
+
+    <div class="shots">
+      <figure class="shot">
+        <a class="shot__frame" href="assets/images/screen-01.png" target="_blank" rel="noopener">
+          <img src="assets/images/screen-01.png" alt="장점 찾기 화면" loading="lazy" />
+        </a>
+        <figcaption><b>장점 찾기</b><span>기록한 일상을 두고 AI에게 맡길지 직접 고를지 선택합니다.</span></figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot__frame" href="assets/images/screen-02.png" target="_blank" rel="noopener">
+          <img src="assets/images/screen-02.png" alt="장점 도출 결과 화면" loading="lazy" />
+        </a>
+        <figcaption><b>장점 도출 결과</b><span>도출된 장점을 근거 문장과 함께 코인 카드로 보여줍니다.</span></figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot__frame" href="assets/images/screen-03.png" target="_blank" rel="noopener">
+          <img src="assets/images/screen-03.png" alt="아카이브 화면" loading="lazy" />
+        </a>
+        <figcaption><b>아카이브</b><span>내가 쓴 카드 · 친구에게 써준 카드 · 타인이 써준 카드로 구분해 보관합니다.</span></figcaption>
+      </figure>
+      <figure class="shot">
+        <a class="shot__frame" href="assets/images/screen-04.png" target="_blank" rel="noopener">
+          <img src="assets/images/screen-04.png" alt="피드 화면" loading="lazy" />
+        </a>
+        <figcaption><b>피드</b><span>본인과 친구가 모은 장점 카드를 한곳에서 열람합니다.</span></figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ============ 07. ERD · 서비스 구조도 ============ -->
+  <section class="sheet" id="s07">
+    <div class="sheet__head">
+      <span class="num">07</span>
+      <h2 class="title">ERD · 서비스 구조도</h2>
+    </div>
+
+    <h3 class="sub">ERD</h3>
+    <figure class="evi__item">
+      <a class="figbox" href="assets/images/erd.png" target="_blank" rel="noopener">
+        <img src="assets/images/erd.png" alt="Voin 서비스 ERD — Member &amp; Social, Coin System, Forms &amp; Cards 세 도메인과 각 테이블의 제약조건" loading="lazy" />
+      </a>
+      <figcaption>Member &amp; Social · Coin System · Forms &amp; Cards 세 도메인 <span>(클릭하면 원본 크기)</span></figcaption>
+    </figure>
+
+    <h3 class="sub">ERD에서 신경 쓴 부분</h3>
+    <div class="claim">
+      <p class="claim__head">
+        데이터 무결성을 <em>애플리케이션에만 의존하지 않고</em>
+        <em>DB 제약조건</em>으로 보장
+      </p>
+      <p class="claim__sub">
+        FK · UNIQUE · CHECK 제약조건을 통해 중복 관계와 비정상 데이터를
+        데이터베이스 단계에서 방지하도록 설계했습니다.
+      </p>
+      <ul class="claim__chips">
+        <li>UNIQUE (member_id, coin_id)</li>
+        <li>CHECK (count &gt;= 0)</li>
+        <li>UNIQUE (card_id, question_id)</li>
+        <li>CHECK (requester_id &lt;&gt; receiver_id)</li>
+        <li>ON DELETE CASCADE</li>
+      </ul>
+    </div>
+
+    <h3 class="sub">기존 ERD와의 차이</h3>
+    <div class="shift">
+      <div class="shift__col" data-when="before">
+        <span class="shift__tag">기존</span>
+        <p>테이블 간 <b>관계를 표현</b>하는 데 집중</p>
+      </div>
+      <span class="shift__arrow" aria-hidden="true"></span>
+      <div class="shift__col" data-when="after">
+        <span class="shift__tag">개선</span>
+        <p>관계뿐 아니라 <b>데이터의 유효성까지 보장</b>하도록 설계</p>
+      </div>
+    </div>
+    <p class="shift__quote">관계를 연결하는 ERD에서, <em>데이터 무결성을 보장하는 ERD</em>로.</p>
+
+    <h3 class="sub">서비스 구조도</h3>
+    <figure class="evi__item">
+      <a class="figbox" href="assets/images/architecture.png" target="_blank" rel="noopener">
+        <img src="assets/images/architecture.png" alt="서비스 구조도 — 사용자 브라우저(React PWA)에서 HTTPS 443으로 DuckDNS 도메인을 거쳐 AWS EC2의 Nginx, Spring Boot, PostgreSQL로 이어지고 Kakao OAuth와 OpenAI GPT API를 연동하는 흐름" loading="lazy" />
+      </a>
+      <figcaption>브라우저 → DuckDNS → Nginx → Spring Boot → PostgreSQL, 외부 연동은 Kakao OAuth · OpenAI GPT API <span>(클릭하면 원본 크기)</span></figcaption>
+    </figure>
+
+    <ul class="infra">
+      <li><b>HTTPS</b><span>Nginx에서 80 → 443 리다이렉트, SSL 종료</span></li>
+      <li><b>리버스 프록시</b><span>/api · /ws · /images 경로를 용도별로 분리해 프록시</span></li>
+      <li><b>스키마 관리</b><span>PostgreSQL 스키마를 Flyway 마이그레이션으로 버전 관리</span></li>
+    </ul>
+  </section>
+
+  <!-- ============ 08. Troubleshooting ============ -->
+  <section class="sheet" id="s08">
+    <div class="sheet__head">
+      <span class="num">08</span>
+      <h2 class="title">Troubleshooting</h2>
+    </div>
+    <p class="body">운영 중 발생한 장애 3건입니다.</p>
+
+    <div class="ts-list">
+    <article class="tsc">
+      <header class="tsc__head">
+        <svg class="tsc__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5 2.8 20h18.4L12 4.5Z"/><path d="M12 10v4.4"/><circle cx="12" cy="17.3" r=".9"/></svg>
+        <h3>macOS에서는 정상 빌드되지만 Linux 서버에서는 빌드 실패</h3>
+        <span class="tsc__tag">Linux Clean Build</span>
+      </header>
+      <dl class="tsc__body">
+        <div class="tsc__row" data-kind="cause">
+          <dt>원인</dt><dd>파일명 대소문자 구분 차이 · Dependency Hoisting · Production Type Check로 로컬에서만 빌드가 통과하던 상태</dd>
+        </div>
+        <div class="tsc__row" data-kind="fix">
+          <dt>해결</dt><dd>Clean Linux 환경을 기준으로 import 경로와 의존성 선언을 정리한 뒤 재검증</dd>
+        </div>
+        <div class="tsc__row" data-kind="result">
+          <dt>결과</dt><dd>운영과 동일한 Linux 환경에서 빌드가 통과하며 배포 파이프라인 정상화</dd>
+        </div>
+      </dl>
+    </article>
+
+    <article class="tsc">
+      <header class="tsc__head">
+        <svg class="tsc__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5 2.8 20h18.4L12 4.5Z"/><path d="M12 10v4.4"/><circle cx="12" cy="17.3" r=".9"/></svg>
+        <h3>배포 직후 502 Bad Gateway 발생, 백엔드가 기동 직후 재시작 반복</h3>
+        <span class="tsc__tag">Production Crash Loop</span>
+      </header>
+      <dl class="tsc__body">
+        <div class="tsc__row" data-kind="cause">
+          <dt>원인</dt><dd><code>systemctl</code> → <code>journalctl</code> 추적 결과, 기동 시 실행되는 Seed 로직이 운영 DB에서 외래키 제약(FK Constraint) 위반</dd>
+        </div>
+        <div class="tsc__row" data-kind="fix">
+          <dt>해결</dt><dd>데이터가 없을 때만 Seed가 동작하도록 변경</dd>
+        </div>
+        <div class="tsc__row" data-kind="result">
+          <dt>결과</dt><dd>크래시 루프 해소, 재배포 후 서비스 정상 응답 (502는 증상, 원인은 애플리케이션 기동 단계)</dd>
+        </div>
+      </dl>
+    </article>
+
+    <article class="tsc">
+      <header class="tsc__head">
+        <svg class="tsc__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5 2.8 20h18.4L12 4.5Z"/><path d="M12 10v4.4"/><circle cx="12" cy="17.3" r=".9"/></svg>
+        <h3>curl은 303 정상 응답, 브라우저에서만 카카오 OAuth 요청이 404</h3>
+        <span class="tsc__tag">Browser-only OAuth 404</span>
+      </header>
+      <dl class="tsc__body">
+        <div class="tsc__row" data-kind="cause">
+          <dt>원인</dt><dd>PWA의 Service Worker가 <code>/api</code> 요청까지 가로채 SPA fallback으로 처리, 요청이 서버에 도달하지 않음</dd>
+        </div>
+        <div class="tsc__row" data-kind="fix">
+          <dt>해결</dt><dd>API 경로를 Service Worker의 fallback 대상에서 제외</dd>
+        </div>
+        <div class="tsc__row" data-kind="result">
+          <dt>결과</dt><dd>브라우저에서도 로그인 리다이렉트 정상 동작, OAuth 흐름 복구</dd>
+        </div>
+      </dl>
+    </article>
+    </div>
+  </section>
+
+  <!-- ============ 09. 회고 ============ -->
+  <section class="sheet" id="s09">
+    <div class="sheet__head">
+      <span class="num">09</span>
+      <h2 class="title">회고</h2>
+    </div>
+
+    <ol class="retro">
+      <li>
+        <h3>핵심 도메인은 서버에서 보장해야 한다.</h3>
+        <p>여러 API 호출로 분산된 비즈니스 로직을 하나의 트랜잭션으로 구성하며 데이터 정합성의 중요성을 경험했습니다.</p>
+      </li>
+      <li>
+        <h3>로컬에서 동작하는 것과 운영 가능한 것은 다르다.</h3>
+        <p>OS, 의존성, 환경변수, 데이터베이스 초기화 등 환경 차이가 실제 장애로 이어질 수 있다는 것을 경험했습니다.</p>
+      </li>
+      <li>
+        <h3>장애를 해결할 때는 정상 구간과 비정상 구간의 경계를 찾는다.</h3>
+        <p>로그와 요청 흐름을 따라가며 문제 범위를 좁히는 방식으로 원인을 분석했습니다.</p>
+      </li>
+    </ol>
+
+    <dl class="links">
+      <div>
+        <dt>GitHub</dt>
+        <dd><a href="https://github.com/afterfrost999" target="_blank" rel="noopener">github.com/afterfrost999</a></dd>
+      </div>
+      <div>
+        <dt>Technical Notes (Notion)</dt>
+        <dd><a href="https://app.notion.com/p/3ddded1817e680ecb856e0b9630cea8f?source=copy_link" target="_blank" rel="noopener">app.notion.com/p/3ddded18…</a></dd>
+      </div>
+      <div>
+        <dt>Service</dt>
+        <dd><a href="https://voin-app.duckdns.org" target="_blank" rel="noopener">voin-app.duckdns.org</a></dd>
+      </div>
+    </dl>
+  </section>
+
+  <footer class="doc__foot">
+    <p>김승조 · afterfrost999@gmail.com</p>
+  </footer>
+
+</div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
